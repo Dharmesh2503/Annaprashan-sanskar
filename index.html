@@ -508,6 +508,10 @@
   background-color: rgba(255,255,255,0.1);
   color: #fff;
 }
+.tet {
+  overflow-x: auto;   /* prevents breaking */
+  flex-wrap: nowrap;  /* force single line */
+}
 
 .footer-copy {
   font-size: 14px;
@@ -585,7 +589,7 @@
 
       .hero-content {
         padding: 0 14px;
-        margin-top: clamp(100px, 38vh, 100px);
+        margin-top: clamp(280px, 38vh, 340px);
       }
 
       .video h2 {
@@ -622,7 +626,34 @@
     font-weight: 700;
     
 }
+  .hero-slide.s1 { background-image: url("assets/mob1.jpeg"); } /* 9:16 image */
+      .hero-slide.s2 { background-image: url("assets/mob2.jpeg"); } /* 9:16 image */
+    .hero-slide { 
+      background-size: cover;
+    background-position: center;
+  
+  }
     }
+    @media (max-width: 360px) {
+  .tet{
+    gap: 3px;
+    flex-wrap: nowrap;
+ 
+  }
+ .social-btn {
+  white-space: nowrap;     /* prevent text breaking */
+  font-size: 11px;         /* smaller text */
+  padding: 8px 12px !important; 
+  /* gap: 1px;       reduce size */
+}
+
+  .social-btn a {
+    font-size: 8px;
+    gap: 1px;
+    padding: 2px 1px;
+    
+  }
+     }
 
     /* DESKTOP: keep hero title in one line */
     @media(min-width: 769px) {
@@ -730,7 +761,7 @@
     <p class="footer-contact">ops@vandanpandit.com</p>
 
     <!-- Social Buttons -->
-    <div class="d-flex justify-content-center gap-2 flex-wrap mt-3 sm-gap-3 ">
+    <div class="d-flex justify-content-center gap-2 flex-nowrap mt-3 sm-gap-3 ">
 
       <a href="https://www.instagram.com/vandan_pandit.for.pooja/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-btn rounded-full px-3 py-2 border: 1px solid rgba(255, 255, 255, 0.3) text-white font-bold bg-white/5 fill-none stroke-currentColor">
         <i class="bi bi-instagram"></i> Instagram
